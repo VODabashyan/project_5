@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 app.post("/contacts", async (req, res) => {
-    const results = await db.deleteContact(req.body);
+    const results = await db.createContact(req.body);
     res.status(201).json({ id: results[0] });
 });
 
