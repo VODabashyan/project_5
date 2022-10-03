@@ -12,8 +12,8 @@ function deleteContact(id) {
     return knex("contacts").where("id", id).del();
 }
 
-function updateContact(id, car) {
-    return knex("contacts").where("id", id).update(car);
+function updateContact(id, contact) {
+    return knex("contacts").where("id", id).update(contact);
 }
 
 module.exports = {
